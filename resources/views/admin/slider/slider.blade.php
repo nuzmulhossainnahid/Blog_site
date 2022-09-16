@@ -22,7 +22,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">Slider Table</h4>
-                            <a href="{{url('createSlider')}}">
+                            <a href="{{url('createPost')}}">
                                 <button type="button" class="btn btn-info font-weight-bold" style="background-color: blue">+ Create New</button>
                             </a>
 
@@ -46,16 +46,16 @@
                                     <tr>
                                         @foreach($data as $data)
                                             <td class="py-1">
-                                                <img src="SliderImage/{{$data->image}}" style="height: 150px;width: 150px" alt="image"/>
+                                                <img src="postImage/{{$data->image}}" style="height: 150px;width: 150px" alt="image"/>
                                             </td>
 
                                             <td>
-                                                {{$data->title}}
+                                                {{$data->Title}}
                                             </td>
 
                                             <td>
-                                                <a href="{{url('editSlider',$data->id)}}" style="margin: 5px" class="btn btn-success">Edit</a>
-                                                <a href="{{url('deleteSlider',$data->id)}}" style="margin: 5px" class="btn btn-danger">Delete</a>
+                                                <a href="{{url('editPost',$data->id)}}" style="margin: 5px" class="btn btn-success">Edit</a>
+                                                <a href="{{url('deletePost',$data->id)}}" style="margin: 5px" class="btn btn-danger">Delete</a>
                                             </td>
 
 

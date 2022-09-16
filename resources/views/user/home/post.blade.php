@@ -36,7 +36,7 @@
             @endforeach
             <!-- Load More -->
             <div class="load-more-btn mt-100 wow fadeInUp" data-wow-delay="0.7s" data-wow-duration="1000ms">
-                <a href="#" class="btn original-btn">Read More</a>
+                <a href="{{url('readMore')}}" class="btn original-btn">Read More</a>
             </div>
         </div>
 
@@ -56,7 +56,8 @@
                 <div class="sidebar-widget-area">
                     <h5 class="title subscribe-title">Subscribe to my newsletter</h5>
                     <div class="widget-content">
-                        <form action="#" class="newsletterForm">
+                        <form action="{{url('Subscribe')}}" class="newsletterForm" method="post">
+                            @csrf
                             <input type="email" name="email" id="subscribesForm" placeholder="Your e-mail here">
                             <button type="submit" class="btn original-btn">Subscribe</button>
                         </form>

@@ -14,7 +14,6 @@
                                 <li><a href="#">Hello Universe!</a></li>
                                 <li><a href="#">Hello Original!</a></li>
                                 <li><a href="#">Hello Earth!</a></li>
-                                <li><a href="#">Hello Colorlib!</a></li>
                             </ul>
                         </div>
                     </div>
@@ -22,12 +21,12 @@
                 <!-- Top Social Area -->
                 <div class="col-12 col-sm-4">
                     <div class="top-social-area">
-                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Behance"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="{{ $social->Pinterest}}" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        <a href="{{ $social->Facebook}}" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="{{ $social->Twitter}}" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="{{ $social->Dribbble}}" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                        <a href="{{ $social->Behance}}" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Behance"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                        <a href="{{ $social->Linkedin}}" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -39,7 +38,7 @@
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
-                    <a href="index.html" class="original-logo"><img src="user/img/core-img/logo.png" alt=""></a>
+                    <a href="/" class="original-logo"><img src="user/img/core-img/logo.png" style="height: 100px" alt=""></a>
                 </div>
             </div>
         </div>
@@ -72,79 +71,11 @@
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="#">Pages</a>
-                                    <ul class="dropdown">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="about-us.html">About Us</a></li>
-                                        <li><a href="single-post.html">Single Post</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="coming-soon.html">Coming Soon</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Catagory</a>
-                                    <ul class="dropdown">
-                                        <li><a href="#">Catagory 1</a></li>
-                                        <li><a href="#">Catagory 1</a></li>
-                                        <li><a href="#">Catagory 1</a>
-                                            <ul class="dropdown">
-                                                <li><a href="#">Catagory 2</a></li>
-                                                <li><a href="#">Catagory 2</a></li>
-                                                <li><a href="#">Catagory 2</a>
-                                                    <ul class="dropdown">
-                                                        <li><a href="#">Catagory 3</a></li>
-                                                        <li><a href="#">Catagory 3</a></li>
-                                                        <li><a href="#">Catagory 3</a></li>
-                                                        <li><a href="#">Catagory 3</a></li>
-                                                        <li><a href="#">Catagory 3</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Catagory 2</a></li>
-                                                <li><a href="#">Catagory 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Catagory 1</a></li>
-                                        <li><a href="#">Catagory 1</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about-us.html">About Us</a></li>
-                                <li><a href="#">Megamenu</a>
-                                    <div class="megamenu">
-                                        <ul class="single-mega cn-col-4">
-                                            <li class="title">Headline 1</li>
-                                            <li><a href="#">Mega Menu Item 1</a></li>
-                                            <li><a href="#">Mega Menu Item 2</a></li>
-                                            <li><a href="#">Mega Menu Item 3</a></li>
-                                            <li><a href="#">Mega Menu Item 4</a></li>
-                                            <li><a href="#">Mega Menu Item 5</a></li>
-                                        </ul>
-                                        <ul class="single-mega cn-col-4">
-                                            <li class="title">Headline 2</li>
-                                            <li><a href="#">Mega Menu Item 1</a></li>
-                                            <li><a href="#">Mega Menu Item 2</a></li>
-                                            <li><a href="#">Mega Menu Item 3</a></li>
-                                            <li><a href="#">Mega Menu Item 4</a></li>
-                                            <li><a href="#">Mega Menu Item 5</a></li>
-                                        </ul>
-                                        <ul class="single-mega cn-col-4">
-                                            <li class="title">Headline 3</li>
-                                            <li><a href="#">Mega Menu Item 1</a></li>
-                                            <li><a href="#">Mega Menu Item 2</a></li>
-                                            <li><a href="#">Mega Menu Item 3</a></li>
-                                            <li><a href="#">Mega Menu Item 4</a></li>
-                                            <li><a href="#">Mega Menu Item 5</a></li>
-                                        </ul>
-                                        <ul class="single-mega cn-col-4">
-                                            <li class="title">Headline 4</li>
-                                            <li><a href="#">Mega Menu Item 1</a></li>
-                                            <li><a href="#">Mega Menu Item 2</a></li>
-                                            <li><a href="#">Mega Menu Item 3</a></li>
-                                            <li><a href="#">Mega Menu Item 4</a></li>
-                                            <li><a href="#">Mega Menu Item 5</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="/">Home</a></li>
+
+                                <li><a href="https://portfolio.edoctordiu.xyz/" target="_blank">About me</a></li>
+
+                                <li><a href="{{url('contact')}}">Contact</a></li>
                             </ul>
 
                             <!-- Search Form  -->

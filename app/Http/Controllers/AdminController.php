@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Author;
+use App\Models\Contact;
+use App\Models\Facebook;
 use App\Models\Post;
 use App\Models\Slider;
+use App\Models\SocialLink;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -177,6 +180,109 @@ public function slider()
         return redirect('slider');
 
     }
+//    Facebook
+    public function facebook()
+    {
+        $data = Facebook::all();
+        return view('admin.facebook.facebook',compact('data'));
+    }
+    public function createFacebook()
+    {
 
+        return view('admin.facebook.createFacebook');
+    }
+    public function createFacebookFrom(Request $request)
+    {
+        $data = new Facebook();
+        $data->link =$request->link;
+        if($request->file('image')){
+            $file= $request->file('image');
+            $filename= date('YmdHi').$file->getClientOriginalName();
+            $file-> move(public_path('FacebookImage'), $filename);
+            $data['image']= $filename;
+        }
+        $data->save();
+        return redirect('facebook');
+    }
+
+    public function editFacebook($id)
+    {
+        $data = Facebook::find($id);
+        return view('admin.facebook.editFacebook',compact('data'));
+    }
+    public function editFacebookFrom(Request $request,$id)
+    {
+        $data = Facebook::find($id);
+        $data->link =$request->link;
+        if($request->file('image')){
+            $file= $request->file('image');
+            $filename= date('YmdHi').$file->getClientOriginalName();
+            $file-> move(public_path('FacebookImage'), $filename);
+            $data['image']= $filename;
+        }
+        $data->save();
+        return redirect('facebook');
+
+    }
+    public function deleteFacebook($id)
+    {
+        $data = Facebook::find($id);
+        $data->delete();
+        return redirect('facebook');
+    }
+//socialLink
+public function socialLink()
+{
+    $data = SocialLink::all();
+    return view('admin.socialLink.socialLink',compact('data'));
+}
+public function createSocialLink()
+{
+    return view('admin..socialLink.createSocialLink');
+}
+
+public function createSocialFrom(Request $request)
+{
+    $data = new SocialLink();
+    $data->Pinterest=$request->Pinterest;
+    $data->Facebook=$request->Facebook;
+    $data->Twitter=$request->Twitter;
+    $data->Dribbble=$request->Dribbble;
+    $data->Behance=$request->Behance;
+    $data->Linkedin=$request->Linkedin;
+    $data->save();
+    return redirect('socialLink');
+}
+public function editSocialLink($id)
+{
+    $data = SocialLink::find($id);
+
+    return view('admin.socialLink.editSocialLink',compact('data'));
+}
+public function editSocialFrom(Request $request,$id)
+{
+    $data = SocialLink::find($id);
+    $data->Pinterest=$request->Pinterest;
+    $data->Facebook=$request->Facebook;
+    $data->Twitter=$request->Twitter;
+    $data->Dribbble=$request->Dribbble;
+    $data->Behance=$request->Behance;
+    $data->Linkedin=$request->Linkedin;
+    $data->save();
+    return redirect('socialLink');
+
+}
+public function deleteSocialLink($id)
+{
+    $data = SocialLink::find($id);
+    $data->delete();
+    return redirect('socialLink');
+
+}
+public function messageView()
+{
+    $data = Contact::all();
+    return view('admin.message.message',compact('data'));
+}
 
 }

@@ -9,7 +9,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Blog-@yield('title')</title>
+    <title>Blog- Home</title>
 
     @include('user.include.css')
 </head>
@@ -17,6 +17,9 @@
 <body>
 
 @include('user.home.modal')
+@if(Session::has('message'))
+    <p class="alert alert-info">{{ Session::get('message') }}</p>
+@endif
 
 @include('user.home.header')
 

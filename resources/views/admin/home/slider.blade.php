@@ -1,16 +1,16 @@
 <!-- partial:partials/_sidebar.html -->
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
-    <div class="user-profile">
-        <div class="user-image" style="margin-left: 80px">
-            <img src="admin/images/faces/face28.png">
-        </div>
-        <div class="user-name">
-            Edward Spencer
-        </div>
-        <div class="user-designation">
-            Developer
-        </div>
-    </div>
+    {{--<div class="user-profile">--}}
+        {{--<div class="user-image" style="margin-left: 80px">--}}
+            {{--<img src="admin/images/faces/face28.png">--}}
+        {{--</div>--}}
+        {{--<div class="user-name">--}}
+            {{--Edward Spencer--}}
+        {{--</div>--}}
+        {{--<div class="user-designation">--}}
+            {{--Developer--}}
+        {{--</div>--}}
+    {{--</div>--}}
     <ul class="nav">
         <li class="nav-item">
             <a class="nav-link" href="index.html">
@@ -38,43 +38,28 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="pages/charts/chartjs.html">
+            <a class="nav-link" href="{{url('facebook')}}">
                 <i class="icon-pie-graph menu-icon"></i>
-                <span class="menu-title">Charts</span>
+                <span class="menu-title">Facebook</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="pages/tables/basic-table.html">
+            <a class="nav-link" href="{{url('socialLink')}}">
                 <i class="icon-command menu-icon"></i>
-                <span class="menu-title">Tables</span>
+                <span class="menu-title">Social Link</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="pages/icons/feather-icons.html">
+            <a class="nav-link" href="{{url('messageView')}}">
                 <i class="icon-help menu-icon"></i>
-                <span class="menu-title">Icons</span>
+                <span class="menu-title">Message</span>
             </a>
         </li>
+
         <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-                <i class="icon-head menu-icon"></i>
-                <span class="menu-title">User Pages</span>
-                <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="auth">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/login-2.html"> Login 2 </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/register-2.html"> Register 2 </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/lock-screen.html"> Lockscreen </a></li>
-                </ul>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="docs/documentation.html">
+            <a class="nav-link" href="#">
                 <i class="icon-book menu-icon"></i>
-                <span class="menu-title">Documentation</span>
+                <span class="menu-title">Ad</span>
             </a>
         </li>
     </ul>

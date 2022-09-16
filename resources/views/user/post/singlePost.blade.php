@@ -10,12 +10,15 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Blog-@yield('title')</title>
+    <title>Blog-Post</title>
 
     @include('user.include.css')
 </head>
 
 <body>
+@if(Session::has('message'))
+    <p class="alert alert-info">{{ Session::get('message') }}</p>
+@endif
 @include('user.home.modal')
 
 @include('user.home.header')
@@ -166,7 +169,8 @@
                     <div class="sidebar-widget-area">
                         <h5 class="title subscribe-title">Subscribe to my newsletter</h5>
                         <div class="widget-content">
-                            <form action="#" class="newsletterForm">
+                            <form action="{{url('Subscribe')}}" class="newsletterForm" method="post">
+                                @csrf
                                 <input type="email" name="email" id="subscribesForm" placeholder="Your e-mail here">
                                 <button type="submit" class="btn original-btn">Subscribe</button>
                             </form>

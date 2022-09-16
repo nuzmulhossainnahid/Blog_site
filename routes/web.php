@@ -51,6 +51,25 @@ Route::get('/deletePost/{id}', [AdminController::class,'deletePost']);
 Route::get('/holdPost/{id}', [AdminController::class,'holdPost']);
 Route::get('/postPost/{id}', [AdminController::class,'postPost']);
 
+//Facebook
+Route::get('/facebook', [AdminController::class,'facebook']);
+Route::get('/createFacebook', [AdminController::class,'createFacebook']);
+Route::post('/createFacebookFrom', [AdminController::class,'createFacebookFrom']);
+Route::get('/editFacebook/{id}', [AdminController::class,'editFacebook']);
+Route::post('/editFacebookFrom/{id}', [AdminController::class,'editFacebookFrom']);
+Route::get('/deleteFacebook/{id}', [AdminController::class,'deleteFacebook']);
+
+//socialLink
+Route::get('/socialLink', [AdminController::class,'socialLink']);
+Route::get('/createSocialLink', [AdminController::class,'createSocialLink']);
+Route::post('/createSocialFrom', [AdminController::class,'createSocialFrom']);
+Route::get('/editSocialLink/{id}', [AdminController::class,'editSocialLink']);
+Route::post('/editSocialFrom/{id}', [AdminController::class,'editSocialFrom']);
+Route::get('/deleteSocialLink/{id}', [AdminController::class,'deleteSocialLink']);
+
+//messageView
+Route::get('/messageView', [AdminController::class,'messageView']);
+
 //Slider
 Route::get('/slider', [AdminController::class,'slider']);
 
@@ -62,3 +81,11 @@ Route::get('/deleteSlider/{id}', [AdminController::class,'deleteSlider']);
 //Single Post
 Route::get('/singlePost/{id}/{AuthorId}', [UserController::class,'singlePost']);
 Route::post('/commentFrom/{id}', [UserController::class,'commentFrom']);
+//Read More
+
+Route::get('/readMore', [UserController::class,'readMore']);
+//Subscribe
+Route::post('/Subscribe', [UserController::class,'Subscribe']);
+//contact
+Route::get('/contact', [UserController::class,'contact']);
+Route::post('/sendContact', [UserController::class,'sendContact']);
